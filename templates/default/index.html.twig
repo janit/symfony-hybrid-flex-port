@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <main class="container">
+
+        <div class="row">
+            <div class="column column-twig" id="ts-app">
+                <h2>Hello from Twig</h2>
+                <table>
+                {% for apartment in appstate.apartments %}
+                    <tr>
+                        <td>
+                            {{ apartment.streetaddress }}<br />
+                            {{ apartment.city }}<br />
+                            {{ apartment.zipcode }}
+                        </td>
+                        <td>{{ apartment.country }}</td>
+                        <td>{{ apartment.buildyear }}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+            <div class="column column-vue">
+                <div id="vue-app"></div>
+            </div>
+            <div class="column column-react">
+                <div id="app"></div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
