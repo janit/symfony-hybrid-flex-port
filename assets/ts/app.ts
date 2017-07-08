@@ -1,7 +1,5 @@
+initTsApp();
 
-console.log('hello ts!!');
-
-/*
 async function initTsApp(){
 
     if (initialAppState.fetchMore) {
@@ -39,4 +37,3 @@ async function initTsApp(){
 
     }
 }
-*/

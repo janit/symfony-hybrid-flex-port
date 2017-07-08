@@ -1,14 +1,13 @@
-FOOBAR S{
+{
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "module": "commonjs",
     "declaration": false,
     "noImplicitAny": false,
     "removeComments": true,
     "experimentalDecorators": true,
     "noLib": false,
-    "jsx": "react",
-    "outDir": "dist"
+    "jsx": "react"
   },
   "exclude": []
 }
