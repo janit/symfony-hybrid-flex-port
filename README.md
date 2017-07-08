@@ -94,16 +94,15 @@ The built filename changes by default, so unless you tweak config, you'll need t
 
 The vanilla JavaScript app is written in <a href="http://typescriptlang.org">TypeScript</a>, which adds type information and some other syntax on top of the JavaScript language.
 
-The easiest way to work with TypeScript is use an editor which supports the language (such as PhpStorm, Visual Studio Code, etc...) out of the box, but otherwise you can also install the TypeScript compiler and do compilation manually:
+The build of the TypeSCript app is now done using <a href="http://symfony.com/doc/current/frontend.html#webpack-encore">Symfony Encore</a>. You can use the dev mode with watch for automatic builds when developing:
 
 ```
-npm i -g typescript
-src/AppBundle/Resources/public/js/typescript/
-tsc app.ts
+./node_modules/.bin/encore dev --watch
 ```
 
-The vanilla JavaScript app is written in <a href="http://typescriptlang.org">TypeScript</a>, which adds type information and some other syntax on top of the JavaScript language.
-The vanilla JavaScript app is written in <a href="http://typescriptlang.org">TypeScript</a>, which adds type information and some other syntax on top of the JavaScript language.
+Note: You can also use Encore to run Webpack dev server for live reloads, etc. More information in the Symfony documentation:
+<a href="http://symfony.com/doc/current/frontend/encore/dev-server.html">Using webpack-dev-server and HMR</a>
+
 ## Background information to follow
 
 As a bonus I will be adding example TypeScript Type Definitions
