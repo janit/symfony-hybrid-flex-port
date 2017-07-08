@@ -43,6 +43,18 @@ Set local environment variables
 cp .env.dist .env
 ```
 
+Install front end build tools (You'll need to have Node, NPM and <a href="https://yarnpkg.com/lang/en/docs/install/">Yarn</a> installed)
+
+```
+yarn
+```
+
+Build Stylesheets and TypeScript app with <a href="https://symfony.com/blog/introducing-webpack-encore-for-asset-management">Symfony Encore</a>:
+
+```
+./node_modules/.bin/encore production
+```
+
 Run:
 
 ```
