@@ -12,21 +12,22 @@ Encore
     .cleanupOutputBeforeBuild()
 
     // will output as web/build/app.js
-    .addEntry('app', './assets/js/main.js')
+    .addEntry('ts-app', './assets/ts/app.ts')
 
     // will output as web/build/global.css
-    .addStyleEntry('global', './assets/css/global.scss')
+    .addStyleEntry('global', './assets/scss/global.scss')
 
     // allow sass/scss files to be processed
     .enableSassLoader()
 
     // allow legacy applications to use $/jQuery as a global variable
-    .autoProvidejQuery()
+    // .autoProvidejQuery()
 
     .enableSourceMaps(!Encore.isProduction())
 
     // create hashed filenames (e.g. app.abc123.css)
     .enableVersioning()
+
 ;
 
 // export the final configuration
