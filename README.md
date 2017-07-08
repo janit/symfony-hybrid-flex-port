@@ -28,7 +28,7 @@ a look for yourself to see if this feels like a good idea or not.
 Clone app:
 
 ```
-git clone git@github.com:janit/symfony-hybrid-twig-react-vue.git
+git clone git@github.com:janit/symfony-hybrid-flex-port.git
 ```
 
 Install dependencies:
