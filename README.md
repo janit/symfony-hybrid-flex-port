@@ -1,9 +1,9 @@
 A Symfony Flex hybrid app sharing state object with Twig, React and Vue
 ==========
 
-NOTE: This is a port of <a href="https://symfony.fi/entry/sharing-state-in-a-symfony-hybrid-app-with-twig-react-etc">the original app</a> from <a href="https://symfony.fi/entry/porting-a-symfony-3-application-to-flex">Symfony 3 to Symfony Flex</a>. Details in article: <a href="https://symfony.fi/entry/porting-a-symfony-3-application-to-flex">Porting a Symfony 3 application to Flex</a>
+<strong>NOTE</strong>: This is a port of <a href="https://symfony.fi/entry/sharing-state-in-a-symfony-hybrid-app-with-twig-react-etc">the original app</a> from <a href="https://symfony.fi/entry/porting-a-symfony-3-application-to-flex">Symfony 3 to Symfony Flex</a>. Details in article: <a href="https://symfony.fi/entry/porting-a-symfony-3-application-to-flex">Porting a Symfony 3 application to Flex</a>
 
-An effort to provide a working  example concept of simply
+This is a sample app that provides a working  example concept of simply
 sharing a state object between the Twig template rendering engine
 as well as JavaScript view layers Vue and React.
 
