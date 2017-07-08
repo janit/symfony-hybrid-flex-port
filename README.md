@@ -1,7 +1,7 @@
 A Symfony Flex hybrid app sharing state object with Twig, React and Vue
 ==========
 
-NOTE: This is a port of <a href="https://symfony.fi/entry/sharing-state-in-a-symfony-hybrid-app-with-twig-react-etc">the original app</a> from <a href="https://symfony.fi/entry/porting-a-symfony-3-application-to-flex">Symfony 3 to Symfony Flex</a>. Keep reading.
+NOTE: This is a port of <a href="https://symfony.fi/entry/sharing-state-in-a-symfony-hybrid-app-with-twig-react-etc">the original app</a> from <a href="https://symfony.fi/entry/porting-a-symfony-3-application-to-flex">Symfony 3 to Symfony Flex</a>. Details in article: <a href="https://symfony.fi/entry/porting-a-symfony-3-application-to-flex">Porting a Symfony 3 application to Flex</a>
 
 An effort to provide a working  example concept of simply
 sharing a state object between the Twig template rendering engine
@@ -49,7 +49,7 @@ Install front end build tools (You'll need to have Node, NPM and <a href="https:
 yarn
 ```
 
-Build Stylesheets and TypeScript app with <a href="https://symfony.com/blog/introducing-webpack-encore-for-asset-management">Symfony Encore</a>:
+Build Stylesheets and the TypeScript app with <a href="https://symfony.com/blog/introducing-webpack-encore-for-asset-management">Symfony Encore</a>:
 
 ```
 ./node_modules/.bin/encore production
@@ -102,12 +102,3 @@ The build of the TypeSCript app is now done using <a href="http://symfony.com/do
 
 Note: You can also use Encore to run Webpack dev server for live reloads, etc. More information in the Symfony documentation:
 <a href="http://symfony.com/doc/current/frontend/encore/dev-server.html">Using webpack-dev-server and HMR</a>
-
-## Background information to follow
-
-As a bonus I will be adding example TypeScript Type Definitions
-for the example animation of how it is like to work with TypeScript
-and how you could benefit from using strong types in your front
-end development workflow.
-
-An article with the background is published here: <a href="https://www.symfony.fi/entry/sharing-state-in-a-symfony-hybrid-app-with-twig-react-etc">Sharing state in a Symfony hybrid with Twig, React and other JavaScript apps</a>
