@@ -37,10 +37,16 @@ Install dependencies:
 composer install
 ```
 
+Set local environment variables
+
+```
+cp .env.dist .env
+```
+
 Run:
 
 ```
-./bin/console server:run
+make serve
 ```
 
 Open app in browser: http://localhost:8000
