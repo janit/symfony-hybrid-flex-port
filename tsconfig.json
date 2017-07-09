@@ -7,7 +7,12 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "noLib": false,
-    "jsx": "react"
+    "jsx": "react",
+    "outDir": "dist",
+    "skipLibCheck": true
   },
-  "exclude": []
+  "exclude": [
+    "node_modules",
+    "static"
+  ]
 }
