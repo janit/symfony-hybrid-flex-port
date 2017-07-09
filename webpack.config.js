@@ -28,6 +28,11 @@ Encore
     // create hashed filenames (e.g. app.abc123.css)
     .enableVersioning()
 
+    .enableTypeScriptLoader(function(tsConfig) {
+    })
+
+
+
 ;
 
 // export the final configuration
