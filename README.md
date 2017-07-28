@@ -31,16 +31,16 @@ Clone app:
 git clone git@github.com:janit/symfony-hybrid-flex-port.git
 ```
 
-Install dependencies:
-
-```
-composer install
-```
-
 Set local environment variables
 
 ```
 cp .env.dist .env
+```
+
+Install dependencies:
+
+```
+composer install
 ```
 
 Install front end build tools (You'll need to have Node, NPM and <a href="https://yarnpkg.com/lang/en/docs/install/">Yarn</a> installed)
