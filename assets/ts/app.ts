@@ -1,5 +1,7 @@
 /// <reference path="appstate.d.ts" />
 
+import axios from 'axios'
+
 initTsApp();
 
 async function initTsApp(){
