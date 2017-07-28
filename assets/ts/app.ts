@@ -17,19 +17,18 @@ async function initTsApp(){
         let output = apartments.reduce( (output,apartment) => {
 
             return output + `
-                        <tr>
-                            <td>
-                                ${ apartment.streetaddress }<br />
-                                ${ apartment.city }<br />
-                                ${ apartment.zipcode }
-                            </td>
-                            <td>${ apartment.country }</td>
-                            <td>${ apartment.buildyear }</td>
-                        </tr>
-                        `;
+                <tr>
+                    <td>
+                        ${ apartment.streetaddress }<br />
+                        ${ apartment.city }<br />
+                        ${ apartment.zipcode }
+                    </td>
+                    <td>${ apartment.country }</td>
+                    <td>${ apartment.buildyear }</td>
+                </tr>
+            `;
 
         },'');
-
 
         let newRows = document.createElement('tbody');
         newRows.innerHTML = output;

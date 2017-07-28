@@ -31,6 +31,8 @@ var ApartmentListing = Vue.extend({
 
             var that = this;
 
+            setTimeout( () => {
+
             axios.get('/api')
                 .then(function (response) {
 
@@ -43,6 +45,9 @@ var ApartmentListing = Vue.extend({
                     console.log(error);
                 });
 
+                console.log('SWAGGER');
+
+            },5000);
         }
 
 

@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "nwb serve-react-app",
+    "build": "nwb build-react-app"
+  }
+}

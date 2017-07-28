@@ -88,8 +88,6 @@ class DefaultController extends Controller
 
         $response = new JsonResponse();
 
-        sleep(mt_rand(0,2));
-
         $response->setContent($appState->jsonSerialize());
 
         return $response;
