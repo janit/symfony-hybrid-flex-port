@@ -1,5 +1,4 @@
 /// <reference path="appstate.d.ts" />
-/// <reference path="axios.d.ts" />
 
 initTsApp();
 
