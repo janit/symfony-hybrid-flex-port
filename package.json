@@ -2,6 +2,7 @@
   "devDependencies": {
     "@symfony/webpack-encore": "^0.9.1",
     "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "ts-loader": "^2.3.2"
   }
 }
