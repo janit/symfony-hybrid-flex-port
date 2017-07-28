@@ -14,13 +14,9 @@ async function initTsApp(){
 
         let apartments = apiResponse.data.apartments;
 
-        var output = '';
+        let output = apartments.reduce( (output,apartment) => {
 
-        for (let j in apartments) {
-
-            let apartment = apartments[j];
-
-            output += `
+            return output + `
                         <tr>
                             <td>
                                 ${ apartment.streetaddress }<br />
@@ -32,12 +28,13 @@ async function initTsApp(){
                         </tr>
                         `;
 
-        }
+        },'');
+
 
         let newRows = document.createElement('tbody');
         newRows.innerHTML = output;
 
-        document.querySelector('#ts-app').appendChild(newRows);
+        document.querySelector('#ts-app table').appendChild(newRows);
 
     }
 }
