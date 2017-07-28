@@ -9,7 +9,7 @@ async function initTsApp(){
 
         console.log('loading more items from Vanilla JS app');
 
-        let apiResponse = await axios.get('/api');
+        let apiResponse: any = await axios.get('/api');
 
         let apartments = apiResponse.data.apartments;
 
