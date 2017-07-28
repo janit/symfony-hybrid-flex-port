@@ -11,9 +11,10 @@
     "outDir": "dist",
     "skipLibCheck": true
   },
+  "include": [
+    "assets/ts"
+  ],
   "exclude": [
-    "node_modules",
-    "vendor",
-    "public"
+    "node_modules"
   ]
 }
