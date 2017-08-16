@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      # Comment out the next line in production
+      - ./:/srv/app:rw
+      # If you develop on Linux, comment out the following volumes to just use bind-mounted project directory from host
+      - /srv/app/var/
+      - /srv/app/var/cache/
+      - /srv/app/var/logs/
+      - /srv/app/var/sessions/
+      - /srv/app/vendor/
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.nginx
+    volumes:
+      # Comment out the next line in production
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./public:/srv/app/public:ro
+    ports:
+      - '8086:80'

@@ -94,7 +94,7 @@ The built filename changes by default, so unless you tweak config, you'll need t
 
 The vanilla JavaScript app is written in <a href="http://typescriptlang.org">TypeScript</a>, which adds type information and some other syntax on top of the JavaScript language.
 
-The build of the TypeSCript app is now done using <a href="http://symfony.com/doc/current/frontend.html#webpack-encore">Symfony Encore</a>. You can use the dev mode with watch for automatic builds when developing:
+The build of the TypeScript app is now done using <a href="http://symfony.com/doc/current/frontend.html#webpack-encore">Symfony Encore</a>. You can use the dev mode with watch for automatic builds when developing:
 
 ```
 ./node_modules/.bin/encore dev --watch
