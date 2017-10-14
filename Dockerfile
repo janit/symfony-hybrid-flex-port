@@ -30,6 +30,12 @@ COPY docker/app/php.ini /usr/local/etc/php/php.ini
 COPY docker/app/install-composer.sh /usr/local/bin/docker-app-install-composer
 RUN chmod +x /usr/local/bin/docker-app-install-composer
 
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN apt-get install -y nodejs
+RUN npm i -g yarn
+RUN yarn
+RUN ./node_modules/.bin/encore production
+
 RUN set -xe \
 	&& docker-app-install-composer \
 	&& mv composer.phar /usr/local/bin/composer
@@ -58,7 +64,6 @@ ENV DATABASE_URL "sqlite:///../var/data.db"
 RUN mkdir -p var/cache var/logs var/sessions \
     && composer install --prefer-dist --no-dev --no-progress --no-suggest --optimize-autoloader --classmap-authoritative --no-interaction \
 	&& composer clear-cache \
-# Permissions hack because setfacl does not work on Mac and Windows
 	&& chown -R www-data var
 
 COPY docker/app/docker-entrypoint.sh /usr/local/bin/docker-app-entrypoint
