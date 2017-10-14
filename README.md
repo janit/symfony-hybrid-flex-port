@@ -28,40 +28,52 @@ a look for yourself to see if this feels like a good idea or not.
 Clone app:
 
 ```
-git clone git@github.com:janit/symfony-hybrid-flex-port.git
+$ git clone git@github.com:janit/symfony-hybrid-flex-port.git
 ```
 
 Set local environment variables
 
 ```
-cp .env.dist .env
+$ cp .env.dist .env
 ```
 
 Install dependencies:
 
 ```
-composer install
+$ composer install
 ```
 
 Install front end build tools (You'll need to have Node, NPM and <a href="https://yarnpkg.com/lang/en/docs/install/">Yarn</a> installed)
 
 ```
-yarn
+$ yarn
 ```
 
 Build Stylesheets and the TypeScript app with <a href="https://symfony.com/blog/introducing-webpack-encore-for-asset-management">Symfony Encore</a>:
 
 ```
-./node_modules/.bin/encore production
+$ ./node_modules/.bin/encore production
 ```
 
 Run:
 
 ```
-make serve
+$ make serve
 ```
 
 Open app in browser: http://localhost:8000
+
+### Docker installation
+
+There is a Docker-compose setup included that runs PHP-FPM and Nginx web server. It is based on [this example](https://github.com/dunglas/symfony-docker) from Kevin Dunglas and was used for some [PHP 7.1 vs 7.2 benchmarks](https://symfony.fi/entry/php-7-1-vs-7-2-benchmarks-with-docker-and-symfony-flex).
+
+Currently the installation requires that you build the front end assets with Symfony Encore manually, but once this is done you should be able to boot the environment with Docker Compose:
+
+```
+$ docker-compose up
+```
+
+The app will be available at http://localhost:8086
 
 ## JavaScript builds
 
