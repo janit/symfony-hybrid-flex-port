@@ -90,14 +90,14 @@ The React app is built using <a href="https://github.com/insin/nwb">nwb</a>, a f
 Install nwb globally:
 
 ```
-npm install -g nwb
+$ npm install -g nwb
 ```
 
 Enter directory and run build:
 
 ```
-cd src/AppBundle/Resources/public/js/react
-react build app.js
+$ cd src/AppBundle/Resources/public/js/react
+$ react build app.js
 ```
 
 The built filename changes by default, so unless you tweak config, you'll need to edit `app/Resources/views/base.html.twig` to the current one.
@@ -109,7 +109,7 @@ The vanilla JavaScript app is written in <a href="http://typescriptlang.org">Typ
 The build of the TypeScript app is now done using <a href="http://symfony.com/doc/current/frontend.html#webpack-encore">Symfony Encore</a>. You can use the dev mode with watch for automatic builds when developing:
 
 ```
-./node_modules/.bin/encore dev --watch
+$ ./node_modules/.bin/encore dev --watch
 ```
 
 Note: You can also use Encore to run Webpack dev server for live reloads, etc. More information in the Symfony documentation:
