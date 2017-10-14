@@ -30,12 +30,6 @@ COPY docker/app/php.ini /usr/local/etc/php/php.ini
 COPY docker/app/install-composer.sh /usr/local/bin/docker-app-install-composer
 RUN chmod +x /usr/local/bin/docker-app-install-composer
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-RUN apt-get install -y nodejs
-RUN npm i -g yarn
-RUN yarn
-RUN ./node_modules/.bin/encore production
-
 RUN set -xe \
 	&& docker-app-install-composer \
 	&& mv composer.phar /usr/local/bin/composer
