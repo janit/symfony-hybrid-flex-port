@@ -50,9 +50,9 @@ RUN rm -Rf docker/
 #ENV SKELETON_COMPOSER_JSON https://raw.githubusercontent.com/symfony/skeleton/v3.3.2/composer.json
 #RUN [ -f composer.json ] || php -r "copy('$SKELETON_COMPOSER_JSON', 'composer.json');"
 
-ENV APP_ENV dev
-ENV APP_DEBUG 1
-ENV APP_SECRET e708fa001dfb807d4a7fe55d6b3af9a5
+ENV APP_ENV prod
+ENV APP_DEBUG 0
+ENV APP_SECRET z708fa001dfb807d4a7fe55d6b3af9a5
 ENV DATABASE_URL "sqlite:///../var/data.db"
 
 RUN mkdir -p var/cache var/logs var/sessions \

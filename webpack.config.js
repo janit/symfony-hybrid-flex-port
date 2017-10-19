@@ -26,7 +26,7 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
 
     // create hashed filenames (e.g. app.abc123.css)
-    .enableVersioning()
+    // .enableVersioning()
 
     // Enable TypeScript
     .enableTypeScriptLoader(function(tsConfig) {})

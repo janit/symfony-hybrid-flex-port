@@ -1,0 +1,8 @@
+#index:
+#    path: /
+#    defaults: { _controller: 'App\Controller\DefaultController::index' }
+
+app:
+    resource: "../src/Controller/"
+    type:     annotation
+    
