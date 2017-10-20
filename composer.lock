@@ -303,12 +303,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "9d706672787826e6f160bc5c3ccada6e42b946af"
+                "reference": "09e072dee1457bcdf3cae4be60b18854f8829992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/9d706672787826e6f160bc5c3ccada6e42b946af",
-                "reference": "9d706672787826e6f160bc5c3ccada6e42b946af",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/09e072dee1457bcdf3cae4be60b18854f8829992",
+                "reference": "09e072dee1457bcdf3cae4be60b18854f8829992",
                 "shasum": ""
             },
             "require": {
@@ -370,7 +370,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-10-03T12:34:10+00:00"
+            "time": "2017-10-19T12:53:54+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -459,12 +459,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
-                "reference": "9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1"
+                "reference": "66a263977ff600336d5eaab921677d89064ffd23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1",
-                "reference": "9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/66a263977ff600336d5eaab921677d89064ffd23",
+                "reference": "66a263977ff600336d5eaab921677d89064ffd23",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2017-10-12T17:23:29+00:00"
+            "time": "2017-10-19T14:44:25+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1197,16 +1197,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "dev-master",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "d48e5019a745aaf584270e095e17352b1e313cb0"
+                "reference": "74f1f17e1e5c32ca43de92611e9097a8d0e0acf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/d48e5019a745aaf584270e095e17352b1e313cb0",
-                "reference": "d48e5019a745aaf584270e095e17352b1e313cb0",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/74f1f17e1e5c32ca43de92611e9097a8d0e0acf2",
+                "reference": "74f1f17e1e5c32ca43de92611e9097a8d0e0acf2",
                 "shasum": ""
             },
             "require": {
@@ -1262,7 +1262,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-10-16T22:25:01+00:00"
+            "time": "2017-09-29T16:05:12+00:00"
         },
         {
             "name": "symfony/asset",
