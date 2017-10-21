@@ -796,16 +796,16 @@
         },
         {
             "name": "javiereguiluz/easyadmin-bundle",
-            "version": "v1.17.4",
+            "version": "v1.17.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/javiereguiluz/EasyAdminBundle.git",
-                "reference": "4d2126af86f32d3344be309e0cb250560b6bfded"
+                "reference": "f2fec43743dfaa576d5549f858695f38303e9cbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/javiereguiluz/EasyAdminBundle/zipball/4d2126af86f32d3344be309e0cb250560b6bfded",
-                "reference": "4d2126af86f32d3344be309e0cb250560b6bfded",
+                "url": "https://api.github.com/repos/javiereguiluz/EasyAdminBundle/zipball/f2fec43743dfaa576d5549f858695f38303e9cbe",
+                "reference": "f2fec43743dfaa576d5549f858695f38303e9cbe",
                 "shasum": ""
             },
             "require": {
@@ -815,7 +815,7 @@
                 "doctrine/orm": "~2.3",
                 "pagerfanta/pagerfanta": "~1.0,>=1.0.1",
                 "php": ">=5.3.0",
-                "sensio/framework-extra-bundle": "~2.3|~3.0,>=3.0.2|4.0.x",
+                "sensio/framework-extra-bundle": "~2.3|~3.0,>=3.0.2|4.0.x|~5.0",
                 "symfony/asset": "~2.3|~3.0|~4.0",
                 "symfony/config": "~2.3|~3.0|~4.0",
                 "symfony/dependency-injection": "~2.3|~3.0|~4.0",
@@ -881,7 +881,7 @@
                 "backend",
                 "generator"
             ],
-            "time": "2017-10-15T13:39:40+00:00"
+            "time": "2017-10-20T17:44:34+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
