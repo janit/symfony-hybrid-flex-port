@@ -5,7 +5,7 @@
     "require": {
         "php": "^7.0.8",
         "javiereguiluz/easyadmin-bundle": "^1.16@dev",
-        "sensio/framework-extra-bundle": "^4.0@dev",
+        "sensio/framework-extra-bundle": "^5.0@dev",
         "symfony/console": "^4.0",
         "symfony/debug-bundle": "^4.0@dev",
         "symfony/flex": "^1.0",
