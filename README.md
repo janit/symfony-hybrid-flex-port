@@ -52,13 +52,13 @@ $ yarn
 Build Stylesheets and the TypeScript app with <a href="https://symfony.com/blog/introducing-webpack-encore-for-asset-management">Symfony Encore</a>:
 
 ```
-$ ./node_modules/.bin/encore production
+$ yarn run encore production
 ```
 
 Run:
 
 ```
-$ make serve
+$ ./bin/console server:run
 ```
 
 Open app in browser: http://localhost:8000
