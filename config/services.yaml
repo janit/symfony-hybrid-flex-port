@@ -33,3 +33,9 @@ services:
         arguments: ['@doctrine.orm.default_entity_manager']
         tags:
             - { name: overblog_graphql.resolver, method: resolve, alias: 'Apartment' }
+
+    App\GraphQL\Resolver\ApartmentListResolver:
+            class: App\GraphQL\Resolver\ApartmentListResolver
+            arguments: ['@doctrine.orm.default_entity_manager']
+            tags:
+                - { name: overblog_graphql.resolver, method: resolve, alias: 'ApartmentList' }

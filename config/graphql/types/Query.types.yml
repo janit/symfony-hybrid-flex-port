@@ -9,11 +9,11 @@ Query:
                     id:
                         description: "Resolves using the attendee id."
                         type: "Int"
-                resolve: "@=resolver('Attendee', [args])"
-            attendee_list:
-                type: "AttendeeList"
+                resolve: "@=resolver('Apartment', [args])"
+            apartment_list:
+                type: "ApartmentList"
                 args:
                     limit:
                         description: "limit"
                         type: "Int"
-                resolve: "@=resolver('AttendeeList', [args])"
+                resolve: "@=resolver('ApartmentList', [args])"

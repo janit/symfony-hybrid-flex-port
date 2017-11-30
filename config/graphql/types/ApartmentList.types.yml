@@ -3,9 +3,6 @@ ApartmentList:
     config:
         description: "A query to return list of Apartments"
         fields:
-            id:
-                type: "String!"
-                description: "The unique hash of the attendee query params."
             apartments:
                 type: "[Apartment]"
                 description: "Apartment details"

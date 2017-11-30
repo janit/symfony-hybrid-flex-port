@@ -1,4 +1,4 @@
-apartment:
+Apartment:
     type: object
     config:
         description: "An apartment"
