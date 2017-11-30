@@ -1,0 +1,26 @@
+apartment:
+    type: object
+    config:
+        description: "An apartment"
+        fields:
+            id:
+                type: "Int!"
+                description: "The unique ID of the apartment."
+            street_address:
+                type: "String"
+                description: "Address of the apartment"
+            country:
+                type: "String"
+                description: "Country of the Apartment"
+            city:
+                type: "String"
+                description: "City of the Apartment"
+            zipcode:
+                type: "String"
+                description: "Zipcode of the Apartment"
+            build_year:
+                type: "Int"
+                description: "Build year of the Apartment"
+            size:
+                type: "Int"
+                description: "Size of the Apartment"

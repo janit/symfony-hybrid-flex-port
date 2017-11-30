@@ -27,3 +27,7 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    App\GraphQL\Resolver\ApartmentResolver:
+        tags:
+            - { name: overblog_graphql.resolver, method: resolve, alias: 'Apartment' }

@@ -1,0 +1,12 @@
+Query:
+    type: object
+    config:
+        description: "Apartments ORM repository"
+        fields:
+            apartment:
+                type: "apartment"
+                args:
+                    id:
+                        description: "Resolves using the attendee id."
+                        type: "Int"
+                resolve: "@=resolver('Attendee', [args])"

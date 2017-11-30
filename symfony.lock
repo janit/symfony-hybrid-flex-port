@@ -16,5 +16,92 @@
             "version": "0.9",
             "ref": "31775bd62133c1ed66fac537694909c25fbfb879"
         }
+    },
+    "twig/extensions": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "4851df0afc426b8f07204379d21fca25b6df5d68"
+        }
+    },
+    "symfony/translation": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "124be9a2b7cc035fd8c56f4fd2e19c907c1f3fb8"
+        }
+    },
+    "symfony/validator": {
+        "version": "v4.0.0-rc2"
+    },
+    "symfony/twig-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "f75ac166398e107796ca94cc57fa1edaa06ec47f"
+        }
+    },
+    "symfony/security": {
+        "version": "v4.0.0-rc2"
+    },
+    "symfony/security-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "85834af1496735f28d831489d12ab1921a875e0d"
+        }
+    },
+    "symfony/intl": {
+        "version": "v4.0.0-rc2"
+    },
+    "symfony/polyfill-intl-icu": {
+        "version": "v1.6.0"
+    },
+    "symfony/form": {
+        "version": "v4.0.0-rc2"
+    },
+    "symfony/asset": {
+        "version": "v4.0.0-rc2"
+    },
+    "pagerfanta/pagerfanta": {
+        "version": "v1.0.5"
+    },
+    "doctrine/dbal": {
+        "version": "v2.6.3"
+    },
+    "doctrine/instantiator": {
+        "version": "1.1.0"
+    },
+    "doctrine/orm": {
+        "version": "v2.5.13"
+    },
+    "jdorn/sql-formatter": {
+        "version": "v1.2.17"
+    },
+    "doctrine/doctrine-bundle": {
+        "version": "1.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.6",
+            "ref": "44d3aa7752dd46f77ba11af2297a25e1dedfb4d0"
+        }
+    },
+    "javiereguiluz/easyadmin-bundle": {
+        "version": "1.17",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.17",
+            "ref": "66070ea553247b0cd5275e21d0fe5399a25f40be"
+        }
     }
 }
