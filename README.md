@@ -75,6 +75,18 @@ $ docker-compose up
 
 The app will be available at http://localhost:8086
 
+## GraphQL API
+
+In an update to the application there was an addition to the application that provides support for a GraphQL API using the Overblog GraphQL bundle. 
+
+In development mode the GraphiQL client is available in the URL http://localhost:8000/graphiql and there are two endpoints created:
+
+- apartment(id: Int): Apartment
+- apartment_list(limit: Int): ApartmentList 
+
+You can learn more about the process of adding GraphQL in this article: [Adding a GraphQL API to your Symfony Flex application](https://symfony.fi/entry/adding-a-graphql-api-to-your-symfony-flex-app)
+
+
 ## JavaScript builds
 
 There are three separate client implementations included, React, Vue.js and Vanilla JavaScript (via TypeScript). If you want to try modifications to the behaviour of the clients you'll need to do some build setup:
