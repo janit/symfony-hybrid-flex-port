@@ -7,13 +7,15 @@ use Overblog\GraphQLBundle\Resolver\ResolverInterface;
 
 class ApartmentResolver implements ResolverInterface {
 
-    private Entitymanager $em;
+    private $em;
 
+    public function __construct(EntityManager $em)
+    {
+        $this->em = $em;
+    }
 
     public function resolve($input)
     {
-
-        var_dump(get_class($this->em));
 /*
 
         $args = $input->getRawArguments();
@@ -29,26 +31,6 @@ class ApartmentResolver implements ResolverInterface {
 
 */
 
-    }
-
-    public function addSolution($name, callable $solutionFunc, array $solutionFuncArgs = [], array $options = [])
-    {
-        // TODO: Implement addSolution() method.
-    }
-
-    public function getSolution($name)
-    {
-        // TODO: Implement getSolution() method.
-    }
-
-    public function getSolutions()
-    {
-        // TODO: Implement getSolutions() method.
-    }
-
-    public function getSolutionOptions($name)
-    {
-        // TODO: Implement getSolutionOptions() method.
     }
 
 
