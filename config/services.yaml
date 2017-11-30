@@ -32,4 +32,4 @@ services:
         class:
         arguments: ['@doctrine.orm.default_entity_manager']
         tags:
-            - { name: overblog_graphql.resolver, method: resolve, alias: 'Attendee' }
+            - { name: overblog_graphql.resolver, method: resolve, alias: 'Apartment' }

@@ -4,9 +4,16 @@ Query:
         description: "Apartments ORM repository"
         fields:
             apartment:
-                type: "apartment"
+                type: "Apartment"
                 args:
                     id:
                         description: "Resolves using the attendee id."
                         type: "Int"
                 resolve: "@=resolver('Attendee', [args])"
+            attendee_list:
+                type: "AttendeeList"
+                args:
+                    limit:
+                        description: "limit"
+                        type: "Int"
+                resolve: "@=resolver('AttendeeList', [args])"
