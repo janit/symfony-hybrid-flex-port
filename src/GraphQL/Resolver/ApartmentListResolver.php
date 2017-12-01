@@ -3,9 +3,11 @@
 namespace App\GraphQL\Resolver;
 
 use Doctrine\ORM\EntityManager;
-use Overblog\GraphQLBundle\Resolver\ResolverInterface;
+use Overblog\GraphQLBundle\Definition\Argument;
+use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
+use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
 
-class ApartmentListResolver implements ResolverInterface {
+class ApartmentListResolver implements ResolverInterface, AliasedInterface {
 
     private $em;
 
@@ -14,11 +16,8 @@ class ApartmentListResolver implements ResolverInterface {
         $this->em = $em;
     }
 
-    public function resolve($input)
+    public function resolve(Argument $args)
     {
-
-        $args = $input->getRawArguments();
-
         $apartments = $this->em->getRepository('App:Apartment')->findBy(
             [],
             ['id' => 'desc'],
@@ -26,47 +25,16 @@ class ApartmentListResolver implements ResolverInterface {
             0
         );
 
-        $apartmentList = [];
+        return ['apartments' => $apartments];
+    }
 
-        foreach($apartments as $apartment){
-
-            $apartmentList[] = [
-                'id' => $apartment->getId(),
-                'street_address' => $apartment->getStreetaddress(),
-                'country' => $apartment->getCountry(),
-                'city' => $apartment->getCity(),
-                'zipcode' => $apartment->getZipcode(),
-                'build_year' => $apartment->getBuildyear(),
-                'size' => $apartment->getSize()
-            ];
-
-        }
-
+    /**
+     * {@inheritdoc}
+     */
+    public static function getAliases()
+    {
         return [
-            'apartments' => $apartmentList
+            'resolve' => 'ApartmentList'
         ];
-
     }
-
-
-    public function addSolution($name, callable $solutionFunc, array $solutionFuncArgs = [], array $options = [])
-    {
-        // TODO: Implement addSolution() method.
-    }
-
-    public function getSolution($name)
-    {
-        // TODO: Implement getSolution() method.
-    }
-
-    public function getSolutions()
-    {
-        // TODO: Implement getSolutions() method.
-    }
-
-    public function getSolutionOptions($name)
-    {
-        // TODO: Implement getSolutionOptions() method.
-    }
-
 }

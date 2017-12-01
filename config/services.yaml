@@ -20,7 +20,7 @@ services:
         resource: '../src/*'
         # you can exclude directories or files
         # but if a service is unused, it's removed anyway
-        exclude: '../src/{Entity,Migrations,Repository,Tests}'
+        exclude: '../src/{Entity,Migrations,Repository,Tests,GraphQL}'
 
     # controllers are imported separately to make sure they
     # have the tag that allows actions to type-hint services
@@ -28,14 +28,4 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
-    App\GraphQL\Resolver\ApartmentResolver:
-        class:
-        arguments: ['@doctrine.orm.default_entity_manager']
-        tags:
-            - { name: overblog_graphql.resolver, method: resolve, alias: 'Apartment' }
-
-    App\GraphQL\Resolver\ApartmentListResolver:
-            class: App\GraphQL\Resolver\ApartmentListResolver
-            arguments: ['@doctrine.orm.default_entity_manager']
-            tags:
-                - { name: overblog_graphql.resolver, method: resolve, alias: 'ApartmentList' }
+    Doctrine\ORM\EntityManager: "@doctrine.orm.default_entity_manager"

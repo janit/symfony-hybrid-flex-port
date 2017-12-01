@@ -3,9 +3,11 @@
 namespace App\GraphQL\Resolver;
 
 use Doctrine\ORM\EntityManager;
-use Overblog\GraphQLBundle\Resolver\ResolverInterface;
+use Overblog\GraphQLBundle\Definition\Argument;
+use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
+use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
 
-class ApartmentResolver implements ResolverInterface {
+class ApartmentResolver implements ResolverInterface, AliasedInterface {
 
     private $em;
 
@@ -14,43 +16,20 @@ class ApartmentResolver implements ResolverInterface {
         $this->em = $em;
     }
 
-    public function resolve($input)
+    public function resolve(Argument $args)
     {
-        $args = $input->getRawArguments();
-
         $apartment = $this->em->getRepository('App:Apartment')->find($args['id']);
 
+        return $apartment;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getAliases()
+    {
         return [
-            'id' => $apartment->getId(),
-            'street_address' => $apartment->getStreetaddress(),
-            'country' => $apartment->getCountry(),
-            'city' => $apartment->getCity(),
-            'zipcode' => $apartment->getZipcode(),
-            'build_year' => $apartment->getBuildyear(),
-            'size' => $apartment->getSize()
+            'resolve' => 'Apartment'
         ];
-
     }
-
-    public function addSolution($name, callable $solutionFunc, array $solutionFuncArgs = [], array $options = [])
-    {
-        // TODO: Implement addSolution() method.
-    }
-
-    public function getSolution($name)
-    {
-        // TODO: Implement getSolution() method.
-    }
-
-    public function getSolutions()
-    {
-        // TODO: Implement getSolutions() method.
-    }
-
-    public function getSolutionOptions($name)
-    {
-        // TODO: Implement getSolutionOptions() method.
-    }
-
-
 }
