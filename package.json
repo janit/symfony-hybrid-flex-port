@@ -1,12 +1,10 @@
 {
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.9.1",
-    "@types/es6-promise": "^0.0.32",
-    "axios": "^0.16.2",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "ts-loader": "^2.3.2",
-    "typescript": "^2.5.3"
+    "@symfony/webpack-encore": "^0.28.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^7.0.1",
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.7.2"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
