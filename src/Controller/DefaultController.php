@@ -7,20 +7,27 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Cache\Simple\FilesystemCache;
+use Doctrine\ORM\EntityManager;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use Symfony\Contracts\Cache\ItemInterface;
 
 class DefaultController extends Controller
 {
 
+    private $em;
+
+    public function __construct(EntityManager $em){
+        $this->em = $em;
+    }
+
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request )
+    public function indexAction(Request $request)
     {
         $appState = new AppState();
 
-        $em = $this->get('doctrine.orm.default_entity_manager');
-        $apartments = $em->getRepository('App:Apartment')->findByLimit(3);
+        $apartments = $this->em->getRepository('App:Apartment')->findByLimit(3);
 
         $appState->setApartments($apartments);
         $appState->setFetchMore(true);
@@ -40,8 +47,7 @@ class DefaultController extends Controller
 
         $appState = new AppState();
 
-        $em = $this->get('doctrine.orm.default_entity_manager');
-        $apartments = $em->getRepository('App:Apartment')->findByLimit($limit);
+        $apartments = $this->em->getRepository('App:Apartment')->findByLimit($limit);
 
         $appState->setApartments($apartments);
 
@@ -59,8 +65,7 @@ class DefaultController extends Controller
 
         $appState = new AppState();
 
-        $em = $this->get('doctrine.orm.default_entity_manager');
-        $apartments = $em->getRepository('App:Apartment')->findByCountry($country);
+        $apartments = $this->em->getRepository('App:Apartment')->findByCountry($country);
 
         $appState->setSelectedCountry($country);
         $appState->setSortBy($country);
@@ -80,19 +85,12 @@ class DefaultController extends Controller
     {
 
         $appState = new AppState();
+        $cache = new FilesystemAdapter();
 
-        $cache = new FilesystemCache();
-        $cacheKey = 'apartments';
-
-        if (!$cache->has($cacheKey)) {
-
-            $em = $this->get('doctrine.orm.default_entity_manager');
-            $apartments = $em->getRepository('App:Apartment')->findByLimit(10);
-
-            $cache->set($cacheKey, $apartments, 3600);
-        }
-
-        $apartments = $cache->get($cacheKey);
+        $apartments = $cache->get('apartment_items', function (ItemInterface $item) {
+            $item->expiresAfter(3600);
+            return $this->em->getRepository('App:Apartment')->findByLimit(10);
+        });
 
         $appState->setApartments($apartments);
 
