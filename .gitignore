@@ -2,11 +2,6 @@
 /vendor/
 /var/cache/
 /public/build/
-
-###> symfony/web-server-bundle ###
-.web-server-pid
-###< symfony/web-server-bundle ###
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php

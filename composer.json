@@ -1,23 +1,19 @@
 {
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "RC",
     "require": {
-        "php": "^7.0.8",
-        "javiereguiluz/easyadmin-bundle": "^1.17",
-        "overblog/graphql-bundle": "^0.10.0@RC",
-        "sensio/framework-extra-bundle": "^5.0",
-        "symfony/console": "^4.0",
-        "symfony/debug-bundle": "^4.0",
-        "symfony/flex": "^1.0",
-        "symfony/framework-bundle": "^4.0",
-        "symfony/lts": "^4@dev",
-        "symfony/serializer": "^4.0",
-        "symfony/web-server-bundle": "^4.0",
-        "symfony/yaml": "^4.0"
+        "php": "^7.4.0",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "symfony/console": "4.4.*",
+        "symfony/dotenv": "4.4.*",
+        "symfony/flex": "^1.3.1",
+        "symfony/framework-bundle": "4.4.*",
+        "symfony/serializer-pack": "^1.0",
+        "symfony/twig-pack": "^1.0",
+        "symfony/yaml": "4.4.*"
     },
     "require-dev": {
-        "symfony/dotenv": "^4.0"
     },
     "config": {
         "preferred-install": {
@@ -35,10 +31,17 @@
             "App\\Tests\\": "tests/"
         }
     },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
@@ -53,8 +56,8 @@
     },
     "extra": {
         "symfony": {
-            "id": "01BWSR0FNGXVXP99B866TD3XF1",
-            "allow-contrib": false
+            "allow-contrib": false,
+            "require": "4.4.*"
         }
     }
 }
